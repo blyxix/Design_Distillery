@@ -21,8 +21,11 @@ $(function(){
 			}
 	});
 
-	var filterizd = $('#designers').filterizr({
-	    //options object
-	});
+	
 
 });
+// if ($('').filterizr) {
+// 	var filterizd = $('#designers').filterizr({
+// 		    //options object
+// 	});
+// };
