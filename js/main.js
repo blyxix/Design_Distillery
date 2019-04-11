@@ -1,16 +1,11 @@
-
-// $(document).ready(function(){
-// 	//Initialising filter function in team page
-// 	alert('ok');
-// 	var filterizd = $('.filtr-container').filterizr({});
-// });​
-
-$( document ).ready(function() {
-    console.log( "ready!" );
-    var filterizd = $('.filtr-container').filterizr({});
+Handlebars.registerHelper("removeSpace",function(myClass){
+		var noSpace = myClass.replace(/\s/g,'');
+		var withLower = noSpace.charAt(0).toLowerCase() + noSpace.substring(1);
+		return withLower;
 });
-
 $(function(){
+
+
 	var key = 'ZZI3LTKqP5pdKUyFTQkzuObtnAHxf5Ao';	
 	var designerList = 'justintakeda'; 				
 	var urlFollowing = 'https://api.behance.net/v2/users/' + designerList + '/following?client_id=' + key;
@@ -31,4 +26,20 @@ $(function(){
 			}
 	});
 
+
 });
+
+var testItem = document.querySelector('.test');
+
+testItem.addEventListener("click", function(){
+	var $grid = $('.grid').isotope({
+		itemSelector: '.grid-item',
+		layoutMode: 'fitRows'
+	});
+
+	// console.log($grid);
+
+	$grid.isotope({ filter: '.artDirection' });
+});
+
+
