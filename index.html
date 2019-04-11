@@ -51,25 +51,20 @@
       <h1 class="h1-light">OUR</h1>
       <h1>TEAM</h1>
     </div>
-    <ul>
-       <!-- For filtering controls add -->
-       <li data-filter="all"> All items </li>
-       <li data-filter="Web"> Category 1 </li>
-       <li data-filter="2"> Category 2 </li>
-       <li data-filter="3"> Category 3 </li>
-       <!-- For a shuffle control add -->
-       <li data-shuffle> Shuffle items </li>
-       <!-- For sorting controls add -->
-       <li data-sortAsc> Ascending </li>
-       <li data-sortDesc> Descending </li>
-    </ul>
-    <div id="designers" class=".filtr-container"></div>
+    <button data-filter="all">All</button>
+    <button data-filter="Web Designer">Web Designer</button>
+    <button data-filter="Graphic Designer">Graphic Designer</button>
+    <button data-filter="Photographer">Photographer</button>
+
+
+    <div id="designers" class="filtr-container"></div>
+    
 
     <script id="designerList" type="text/x-handlebars-template">
       <div class="wrapper d-flex flex-wrap justify-content-around">
         {{#each following}}
-          <div class="designer-item d-flex flex-column align-items-center filtr-item data-category="{{fields.[0]}},{{fields.[1]}},{{fields.[2]}}" data-sort="value">
-            <img class="profile-img" src="{{images.[100]}}">
+          <div class="designer-item d-flex flex-column align-items-center filtr-item" data-category="{{fields.[0]}},{{fields.[1]}},{{fields.[2]}}" data-sort="value">
+            <img class="profile-img" alt="profile image" src="{{images.[100]}}">
             <h3 class="designer-name">{{first_name}} {{last_name}}</h3>
             <h4 class="designer-field">{{fields.[0]}}</h4>
         </div>
@@ -93,6 +88,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/handlebars-v4.1.1.js"></script>
+    <script src="//code.jquery.com/jquery-1.12.1.min.js"></script>
     <script src="js/jquery.filterizr.min.js"></script>
     <script src="js/main.js"></script>
       
