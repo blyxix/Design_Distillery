@@ -13,7 +13,7 @@
 
     <title>Design Distillery</title>
   </head>
-  <body id="index" >
+  <body id="person">
 
     <div class="pos-f-t">
       <nav class="navbar navbar-light">
@@ -49,30 +49,19 @@
     </div>
     <hr>
     <div>
-      <h1 class="h1-light">OUR</h1>
-      <h1>TEAM</h1>
-    </div>
-    <div class="group-wrapper d-flex justify-content-center">
-      <div class="filter-group btn-group btn-group-toggle" role="group">
-        <button class="btn btn-dark allButton">ALL</button>
-        <button class="btn btn-dark graphicButton">Graphic Designer</button>
-        <button class="btn btn-dark webButton">Web Designer</button>
-        <button class="btn btn-dark photoButton">Photographer</button>
-      </div>
-    </div>
 
-    <div id="designers"></div>
+    <div id="designerPerson"></div>
 
-    <script id="designerList" type="text/x-handlebars-template">
-      <div class="wrapper d-flex flex-wrap justify-content-around grid">
-        {{#each following}}
-          <div class="designer-item flex-column align-items-center grid-item {{removeSpace fields.[0]}}">
-            <a href="person.html?id={{username}}">
-              <img class="profile-img" src="{{images.[100]}}">
-              <h3 class="designer-name">{{first_name}} {{last_name}}</h3>
-              <h4 class="designer-field">{{fields.[0]}}</h4>
-            </a>
-        </div>
+    <script id="personDetails" type="text/x-handlebars-template">
+      <div>
+        {{#each projects}}
+          <div class="project-wrapper">
+            <img class="project-img" src="{{covers.[404]}}" alt="project item">
+            <div class="text-overlay">
+              <p class="project-desc">{{name}}</p>
+            </div>
+          </div>
+          
         {{/each}}
       </div>
 

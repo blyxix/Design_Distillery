@@ -14,6 +14,9 @@ h1{
 	font-size: 200%;
 	text-align: center;
 }
+h3,h4{
+	text-align: center;
+}
 hr { 
     display: block;
 	margin-top: 0;
@@ -21,6 +24,9 @@ hr {
 	width: 65%;
     border-width: 1px;
     background-color: black;
+}
+a{
+	color: #343a40;
 }
 .h1-light{
 	font-weight: 100;
@@ -51,6 +57,9 @@ hr {
 .designer-item {
 	width: 42.5%;
 	margin-top: 6%;
+	display: flex;
+	margin-left: 5%;
+
 }
 .designer-name{
 	font-family: $f-sans;
@@ -61,6 +70,63 @@ hr {
 .designer-field{
 	font-family: $f-sans;
 	font-size: 80%;
-	margin-top: 3%;
 	font-weight: 300;
 }
+.btn{
+	font: $f-sans;
+	font-weight: 200;
+	font-size: 80%;
+	border-radius: 0;
+}
+.group-wrapper{
+	 background-color: #343a40;
+}
+
+//menu thingy
+.nav-link{
+	color: black;
+	font: $f-sans;
+	font-weight: 200;
+}
+
+// .pos-f-t{
+// 	position: relative;
+// }
+// #navbarToggleExternalContent{
+// 	position: absolute;
+// 	background-color: #343a40;
+// 	width: 100%;
+// 	top:100%;
+// 	left:0;
+// 	z-index: 100;
+// }
+
+.project-img{
+	width: 100%;
+}
+.project-wrapper{
+	position: relative;
+}
+.project-desc{
+	color: white;
+	z-index: 10;
+}
+.text-overlay{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: linear-gradient( rgba(0,0,0,0), rgba(0,0,0,0.8));
+	height: 45%;
+	padding: 7%;
+	padding-top: 20%;
+
+}
+
+
+
+
+
+
+
+

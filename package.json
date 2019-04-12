@@ -1,7 +1,6 @@
 {
   "name": "design-distillery",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,5 +21,7 @@
     "gulp-autoprefixer": "^6.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5"
-  }
+  },
+  "dependencies": {},
+  "description": ""
 }
