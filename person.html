@@ -8,7 +8,6 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
-    
     <link rel="stylesheet" href="css/main.css">
 
     <title>Design Distillery</title>
@@ -48,11 +47,11 @@
       </div>
     </div>
     <hr>
-    <div>
+    
+    <div id="displayPerson"></div>
+    <div id="displayProjects"></div>
 
-    <div id="designerPerson"></div>
-
-    <script id="personDetails" type="text/x-handlebars-template">
+    <script id="projects" type="text/x-handlebars-template">
       <div>
         {{#each projects}}
           <div class="project-wrapper">
@@ -64,11 +63,45 @@
           
         {{/each}}
       </div>
+    </script>
 
+    <script id="personDetails" type="text/x-handlebars-template">
+      <div class="mb-2">
+        <h1 class="designer-header">{{user.first_name}} {{user.last_name}}</h1>
+        <img class="mb-2 profile-img-lg" src="{{user.images.[138]}}">
+        <h3 class="designer-role">{{user.fields.[0]}}</h3>
+        <div class="d-flex justify-content-center">
+          <div class="d-flex align-items-start">
+            <img class="marker" src="https://img.icons8.com/android/13/000000/marker.png">
+          </div>
+          <h4 class="designer-loc">{{user.location}}</h4>
+        </div>
+        <div class="mt-2 mb-4 stats-wrapper d-flex flex-column justify-space-around d-block mr-auto ml-auto">
+          <div class="d-flex justify-content-between">
+            <p class="user-stats-label">Project Views:</p>
+            <p class="user-stats-data">{{user.stats.views}}</p>
+          </div>
+          <div class="d-flex justify-content-between">
+            <p class="user-stats-label">Appreciations:</p>
+            <p class="user-stats-data">{{user.stats.appreciations}}</p>
+          </div>
+          <div class="d-flex justify-content-between">
+            <p class="user-stats-label">Followers:</p>
+            <p class="user-stats-data">{{user.stats.followers}}</p>
+          </div>
+          <div class="d-flex justify-content-between">
+            <p class="user-stats-label">Following:</p>
+            <p class="user-stats-data">{{user.stats.following}}</p>
+          </div>
+        </div>
+        <div class="about-wrapper d-block mr-auto ml-auto">
+          <h4 class="about">About me</h4>
+          <p class="about-details">{{user.sections.[About Me]}}</p>
+        </div>
+      </div>
     </script>
  
-    </div>
-    
+      
 
 
 
