@@ -13,41 +13,47 @@
     <title>Design Distillery</title>
   </head>
   <body id="project">
-
-    <div class="pos-f-t">
-      <nav class="navbar navbar-light">
-        <a class="navbar-brand" href="index.html">
-          <img src="img/icon.svg" width="30" height="30" class="logo align-top" alt="">
-          <img src="img/logo_text.svg" width="30" height="30" class="logo-text align-top" alt="">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </nav>
-      <div class="collapse" id="navbarToggleExternalContent">
-        <div class="p-1">
-          <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Work</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Team</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">contact</a>
-            </li>
-          </ul>
+  
+    <div class="content">
+      <div class="pos-f-t">
+        <nav class="navbar navbar-light">
+          <a class="navbar-brand" href="index.html">
+            <img src="img/icon.svg" width="30" height="30" class="logo align-top" alt="">
+            <img src="img/logo_text.svg" width="30" height="30" class="logo-text align-top" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class="p-1">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Work</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
+      <hr>
+      <div id="projectElements"></div>
     </div>
-    <hr>
-    <div id="projectElements"></div>
+    <footer class="mt-2 footer d-flex flex-column align-items-center">
+      <img class="footer-logo" src="img/logo_white.svg">
+      <p class="footer-text mt-2">© Copyright 2019 Design Distillery. All rights reserved.</p>
+    </footer>
 
     <script id="projectBody" type="text/x-handlebars-template">
       <div>
@@ -56,17 +62,23 @@
           <p class="project-details d-block mr-auto ml-auto mt-3 mb-3">{{project.description}}</p>
           <div class="project-stats-wrapper d-block mr-auto ml-auto">
             <div class="project-stats d-flex">
-              <div class="stat-item d-flex">
-                <img class="stat-icon" src="https://img.icons8.com/material/24/000000/facebook-like.png">
-                <p>{{project.stats.appreciations}}</p>
+              <div class="stat-item d-flex align-items-end">
+                <div class="stat-icon">
+                  <img src="img/like.png">
+                </div>
+                <p class="stats-data">{{project.stats.appreciations}}</p>
               </div>
-              <div class="stat-item d-flex">
-                <img class="stat-icon" src="https://img.icons8.com/material/24/000000/visible.png">
-                <p>{{project.stats.views}}</p>
+              <div class="stat-item d-flex align-items-end">
+                <div class="stat-icon">
+                  <img src="img/view.png">
+                </div>
+                <p class="stats-data">{{project.stats.views}}</p>
               </div>
-              <div class="stat-item d-flex">
-                <img class="stat-icon" src="https://img.icons8.com/material/24/000000/topic.png">
-                <p>{{project.stats.views}}</p>
+              <div class="stat-item d-flex align-items-end">
+                <div class="stat-icon">
+                  <img src="img/comment.png">
+                </div>
+                <p class="stats-data">{{project.stats.comments}}</p>
               </div>
             </div>
           </div>

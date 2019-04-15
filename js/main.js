@@ -1,5 +1,5 @@
 var userID; //global will use later
-var key = '9AwInosQykaf21iKK6bM2H24oL5BJ1Wa';	
+var key = 'ZZI3LTKqP5pdKUyFTQkzuObtnAHxf5Ao';	
 //backup key - ZZI3LTKqP5pdKUyFTQkzuObtnAHxf5Ao 9AwInosQykaf21iKK6bM2H24oL5BJ1Wa
 var designerList = 'justintakeda'; 				
 var urlFollowing = 'https://api.behance.net/v2/users/' + designerList + '/following?client_id=' + key;
@@ -51,7 +51,7 @@ if($('#index').length > 0) {
 						});
 						var allButton = document.querySelector('.allButton');
 						var graphicButton = document.querySelector('.graphicButton');
-						var webButton = document.querySelector('.webButton');
+						var brandButton = document.querySelector('.brandButton');
 						var photoButton = document.querySelector('.photoButton');
 
 						allButton.addEventListener("click", function(){
@@ -62,8 +62,8 @@ if($('#index').length > 0) {
 							$grid.isotope({ filter: '.graphicDesign' });
 						});
 
-						webButton.addEventListener("click", function(){
-							$grid.isotope({ filter: '.webDesign' });
+						brandButton.addEventListener("click", function(){
+							$grid.isotope({ filter: '.branding' });
 						});
 
 						photoButton.addEventListener("click", function(){
@@ -93,7 +93,7 @@ if($('#index').length > 0) {
 	});
 }//end home
 
-
+//https://api.behance.net/v2/users/a-mirocka?client_id='9AwInosQykaf21iKK6bM2H24oL5BJ1Wa
 
 if($('#person').length > 0) {
 	var pageURL = new URL(document.location);

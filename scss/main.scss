@@ -4,6 +4,7 @@ $f-serif: 'Playfair Display', serif;
 
 body{
 	background: $bg-color;
+	position: relative;
 }
 span{
 	background: black;
@@ -16,6 +17,7 @@ h1{
 }
 h3,h4{
 	text-align: center;
+	color: black;
 }
 hr { 
     display: block;
@@ -26,10 +28,16 @@ hr {
     background-color: black;
 }
 a{
-	color: #343a40;
+	color: #D98648;
+}
+a:hover{
+	color: #D98648;
 }
 p {
 	margin-bottom: 0px;
+}
+.content{
+	min-height: 100vh;
 }
 .h1-light{
 	font-weight: 100;
@@ -234,7 +242,7 @@ box-shadow: inset 17px 47px 50px -77px rgba(0,0,0,0.75);
 .stat-icon{
 	width: 24px;
 	height: 24px;
-	margin-right: 25%;
+	margin-right: 15%;
 }
 .pull-indicator{
 	height: 30px;
@@ -248,6 +256,27 @@ box-shadow: inset 17px 47px 50px -77px rgba(0,0,0,0.75);
 	width: 65%;
     border-width: 1px;
     background-color: #D98648;
+}
+.stats-data{
+	font-family: $f-sans;
+	font-weight: 700;
+	font-size: 14px;
+}
+.footer{
+	background-color: #343a40;
+	padding: 20px;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+.footer-text{
+	color: white;
+	font-family: $f-sans;
+	font-weight: 100;
+	font-size: 10px;
+}
+.footer-logo{
+	width: 60%;
 }
 
 
