@@ -47,20 +47,38 @@
       </div>
     </div>
     <hr>
-    
-    <div id="displayPerson"></div>
+    <div class="pull-down">
+      <div id="displayPerson"></div>
+      <div class ="tab-wrapper row">
+        <div class="filler-block col-3"></div>
+        <div class="tab col-6">
+          <div class="d-flex justify-content-center" type="button" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapse">
+            <!-- <img type="button" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapse" src="https://img.icons8.com/android/48/000000/about.png"> -->
+            <div class="pull-indicator">
+              <hr class="indicator-line">
+              <hr class="indicator-line">
+            </div>
+            <!--<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapse">
+              Button with data-target
+            </button> -->
+          </div>
+        </div>
+        <div class="filler-block col-3"></div>
+      </div>
+    </div>
     <div id="displayProjects"></div>
 
     <script id="projects" type="text/x-handlebars-template">
       <div>
         {{#each projects}}
-          <div class="project-wrapper">
-            <img class="project-img" src="{{covers.[404]}}" alt="project item">
-            <div class="text-overlay">
-              <p class="project-desc">{{name}}</p>
+          <a href="project.html?id={{id}}">
+            <div class="project-wrapper">
+              <img class="project-img" src="{{covers.[404]}}" alt="project item">
+              <div class="text-overlay">
+                <p class="project-desc">{{name}}</p>
+              </div>
             </div>
-          </div>
-          
+          </a>
         {{/each}}
       </div>
     </script>
@@ -68,35 +86,41 @@
     <script id="personDetails" type="text/x-handlebars-template">
       <div class="mb-2">
         <h1 class="designer-header">{{user.first_name}} {{user.last_name}}</h1>
-        <img class="mb-2 profile-img-lg" src="{{user.images.[138]}}">
-        <h3 class="designer-role">{{user.fields.[0]}}</h3>
-        <div class="d-flex justify-content-center">
-          <div class="d-flex align-items-start">
-            <img class="marker" src="https://img.icons8.com/android/13/000000/marker.png">
+        <div class="collapse" id="collapse">
+          <img class="mb-2 profile-img-lg" src="{{user.images.[138]}}">
+          <h3 class="designer-role">{{user.fields.[0]}}</h3>
+          <div class="d-flex justify-content-center">
+            <div class="d-flex align-items-start">
+              <img class="marker" src="https://img.icons8.com/android/13/000000/marker.png">
+            </div>
+            <h4 class="designer-loc">{{user.location}}</h4>
           </div>
-          <h4 class="designer-loc">{{user.location}}</h4>
-        </div>
-        <div class="mt-2 mb-4 stats-wrapper d-flex flex-column justify-space-around d-block mr-auto ml-auto">
-          <div class="d-flex justify-content-between">
-            <p class="user-stats-label">Project Views:</p>
-            <p class="user-stats-data">{{user.stats.views}}</p>
+          <div class="mt-2 mb-4 stats-wrapper d-flex flex-column justify-space-around d-block mr-auto ml-auto">
+            <div class="d-flex justify-content-between">
+              <p class="user-stats-label">Project Views:</p>
+              <p class="user-stats-data">{{user.stats.views}}</p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="user-stats-label">Appreciations:</p>
+              <p class="user-stats-data">{{user.stats.appreciations}}</p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="user-stats-label">Followers:</p>
+              <p class="user-stats-data">{{user.stats.followers}}</p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="user-stats-label">Following:</p>
+              <p class="user-stats-data">{{user.stats.following}}</p>
+            </div>
           </div>
-          <div class="d-flex justify-content-between">
-            <p class="user-stats-label">Appreciations:</p>
-            <p class="user-stats-data">{{user.stats.appreciations}}</p>
+          <div class="about-wrapper d-block mr-auto ml-auto">
+            {{#if user.sections.[About Me]}}
+            <h4 class="about">About me</h4>
+            <p class="about-details">{{user.sections.[About Me]}}</p>
+            {{else}}
+            
+            {{/if}}
           </div>
-          <div class="d-flex justify-content-between">
-            <p class="user-stats-label">Followers:</p>
-            <p class="user-stats-data">{{user.stats.followers}}</p>
-          </div>
-          <div class="d-flex justify-content-between">
-            <p class="user-stats-label">Following:</p>
-            <p class="user-stats-data">{{user.stats.following}}</p>
-          </div>
-        </div>
-        <div class="about-wrapper d-block mr-auto ml-auto">
-          <h4 class="about">About me</h4>
-          <p class="about-details">{{user.sections.[About Me]}}</p>
         </div>
       </div>
     </script>

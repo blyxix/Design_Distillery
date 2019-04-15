@@ -154,3 +154,57 @@ p {
   font-family: "Playfair Display", serif;
   font-weight: 400;
   font-size: 12px; }
+
+.tab {
+  background-color: white;
+  -webkit-box-shadow: 2px 33px 35px -14px rgba(0, 0, 0, 0.69);
+  -moz-box-shadow: 2px 33px 35px -14px rgba(0, 0, 0, 0.69);
+  box-shadow: 2px 33px 35px -14px rgba(0, 0, 0, 0.69); }
+
+.filler-block {
+  -webkit-box-shadow: inset 17px 47px 50px -77px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 17px 47px 50px -77px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 17px 47px 50px -77px rgba(0, 0, 0, 0.75); }
+
+.pull-down {
+  position: absolute;
+  z-index: 100;
+  width: 100%; }
+
+#displayPerson {
+  background-color: #fff;
+  padding-bottom: 2px; }
+
+.project-title {
+  font-weight: 700;
+  font-size: 100%; }
+
+.project-details {
+  font-family: "Playfair Display", serif;
+  width: 70%;
+  font-size: 80%;
+  text-align: justify; }
+
+.project-stats-wrapper {
+  width: 70%; }
+
+.stat-item {
+  margin-right: 15%; }
+
+.stat-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 25%; }
+
+.pull-indicator {
+  height: 30px;
+  width: 100%;
+  padding-top: 5%; }
+
+.indicator-line {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 5%;
+  width: 65%;
+  border-width: 1px;
+  background-color: #D98648; }

@@ -1,5 +1,5 @@
 var userID; //global will use later
-var key = 'ZZI3LTKqP5pdKUyFTQkzuObtnAHxf5Ao';	
+var key = '9AwInosQykaf21iKK6bM2H24oL5BJ1Wa';	
 //backup key - ZZI3LTKqP5pdKUyFTQkzuObtnAHxf5Ao 9AwInosQykaf21iKK6bM2H24oL5BJ1Wa
 var designerList = 'justintakeda'; 				
 var urlFollowing = 'https://api.behance.net/v2/users/' + designerList + '/following?client_id=' + key;
@@ -12,6 +12,13 @@ Handlebars.registerHelper("removeSpace",function(myClass){
 
 
 
+Handlebars.registerHelper('if_eq', function(a, b, opts) {
+    if (a == b) {
+        return opts.fn(this);
+    } else {
+        return opts.inverse(this);
+    }
+});
 
 if($('#index').length > 0) {
 
@@ -144,6 +151,40 @@ if($('#person').length > 0) {
 				}//end success
 		});//end ajax
 	});
+}
+
+if($('#project').length > 0) {
+	var pageURL = new URL(document.location);
+	var params = pageURL.searchParams;
+	var behanceUser  = params.get('id');
+	var urlProjectDetails = 'http://www.behance.net/v2/projects/'+ behanceUser +'?api_key=' + key;
+	
+
+	$(function(){
+		$.ajax({
+			url: urlProjectDetails,
+				dataType: 'jsonp',
+				success: function(list) {
+					createHTML(list);
+					
+					function createHTML(data){
+						/*Handlebars functionality*/
+						console.log(data);
+						var rawTemplate = document.getElementById("projectBody").innerHTML;
+						var compiledTemplate = Handlebars.compile(rawTemplate);
+						var ourGeneratedHTML = compiledTemplate(data);
+						var designerContainer = document.getElementById("projectElements");
+						designerContainer.innerHTML = ourGeneratedHTML;
+						
+
+
+						
+
+
+					}// end function
+				}//end success
+		});//end ajax
+	}); //end outer function
 }
 
 
