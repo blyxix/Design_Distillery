@@ -237,3 +237,9 @@ p {
 
 .footer-logo {
   width: 60%; }
+
+.modal-backdrop {
+  display: none; }
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.5); }
