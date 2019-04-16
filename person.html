@@ -1,81 +1,77 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
     <link rel="stylesheet" href="css/Chart.css">
     <link rel="stylesheet" href="css/main.css">
-
     <title>Design Distillery</title>
-  </head>
-  <body id="person">
+</head>
+
+<body id="person">
     <div class="content">
-      <div class="pos-f-t">
-        <nav class="navbar navbar-light">
-          <a class="navbar-brand" href="index.html">
-            <img src="img/icon.svg" width="30" height="30" class="logo align-top" alt="">
-            <img src="img/logo_text.svg" width="30" height="30" class="logo-text align-top" alt="">
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </nav>
-        <div class="collapse" id="navbarToggleExternalContent">
-          <div class="p-1">
-            <ul class="nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Work</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Team</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <hr>
-      <div class="pull-down">
-        <div id="displayPerson"></div>
-        <div class ="tab-wrapper row">
-          <div class="filler-block col-3"></div>
-          <div class="tab col-6">
-            <div class="d-flex justify-content-center" type="button" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapse">
-              <!-- <img type="button" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapse" src="https://img.icons8.com/android/48/000000/about.png"> -->
-              <div class="pull-indicator">
-                <hr class="indicator-line">
-                <hr class="indicator-line">
-              </div>
-              <!--<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapse">
-                Button with data-target
-              </button> -->
+        <div class="pos-f-t">
+            <nav class="navbar navbar-light">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/icon.svg" width="30" height="30" class="logo align-top" alt="">
+                    <img src="img/logo_text.svg" width="30" height="30" class="logo-text align-top" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="p-1">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Work</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </div>
-          <div class="filler-block col-3"></div>
         </div>
-      </div>
-      <div id="displayProjects"></div>
+        <hr>
+        <div class="pull-down">
+            <div id="displayPerson"></div>
+            <div class="tab-wrapper row">
+                <div class="filler-block col-3"></div>
+                <div class="tab col-6">
+                    <div class="d-flex justify-content-center" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapse">
+                        <div class="pull-indicator">
+                            <hr class="indicator-line">
+                            <hr class="indicator-line">
+                        </div>
+                    </div>
+                </div>
+                <div class="filler-block col-3"></div>
+            </div>
+        </div>
+        <div id="displayProjects"></div>
     </div>
     <footer class="mt-2 footer d-flex flex-column align-items-center">
-      <img class="footer-logo" src="img/logo_white.svg">
-      <p class="footer-text mt-2">© Copyright 2019 Design Distillery. All rights reserved.</p>
+        <img class="footer-logo" src="img/logo_white.svg">
+        <p class="footer-text mt-2">© Copyright 2019 Design Distillery. All rights reserved.</p>
     </footer>
-
     <script id="projects" type="text/x-handlebars-template">
-      <div>
+        <div>
         {{#each projects}}
           <a href="project.html?id={{id}}">
             <div class="project-wrapper">
@@ -88,9 +84,8 @@
         {{/each}}
       </div>
     </script>
-
     <script id="personDetails" type="text/x-handlebars-template">
-      <div class="mb-2">
+        <div class="mb-2">
         <h1 class="designer-header">{{user.first_name}} {{user.last_name}}</h1>
         <div class="collapse" id="collapse">
           <img class="mb-2 profile-img-lg" src="{{user.images.[138]}}">
@@ -152,14 +147,6 @@
         </div>
       </div>
     </script>
- 
-      
-
-
-
-
-
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -169,6 +156,6 @@
     <script src="js/handlebars-v4.1.1.js"></script>
     <script src="js/Chart.bundle.js"></script>
     <script src="js/main.js"></script>
-      
-  </body>
+</body>
+
 </html>
